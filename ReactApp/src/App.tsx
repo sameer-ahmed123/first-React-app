@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Alert from "./components/Alert";
 import Button from "./components/Button";
+import Card from "./components/card";
 
 function App() {
   const [alertVisible, setAlertVisibility] = useState(false);
@@ -18,6 +19,8 @@ function App() {
       <Button onClick={() => setAlertVisibility(true)} color="warning">
         click me
       </Button>
+
+      <Card></Card>
     </div>
   );
 }

@@ -1,0 +1,50 @@
+.corner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    border-radius: 0px 25% ;
+    top: 0;
+    right: 0;
+    background-color: blue;
+}
+.plus{
+    color: #fff;
+}
+.card-mine{
+    position: relative;
+    max-width:262px ;
+    display: block;
+    border-radius: 5px;
+    padding: 32px 24px;
+    background-color: #9cd5d9;
+    z-index: 0;
+    text-decoration: none;
+    margin: 12px;
+    overflow: hidden;
+}
+.card-mine::before{
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: -16px;
+    right: -16px;
+    height: 32px;
+    width: 32px;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    border-radius: 32px;
+    transition: transform 0.2s ease-in-out;
+    background: blue;
+}
+.card-mine:hover::before{
+    transform: scale(21);
+}
+
+.card-mine:hover .small ,.card-mine:hover h3{
+    color: #fff;
+    transition: color 0.2s ease-in-out;
+}
